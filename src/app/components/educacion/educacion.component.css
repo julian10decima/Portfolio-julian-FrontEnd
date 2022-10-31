@@ -1,0 +1,161 @@
+.row{
+    padding: 20px;
+}
+
+
+@media (min-width: 500px) and (max-width:2000px) {
+    .container{
+        max-width: 100%;
+    }
+}
+
+.section-title {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    border-bottom: solid 3px rgb(255, 255, 255);
+    margin-bottom: 4rem;
+    margin-top: 4rem;
+}
+  
+.section-title h2 {
+    padding-right: 1rem;
+}
+  
+.btn {
+    border-radius: 50%;
+}
+
+.section-card{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+.card{
+    box-shadow: 4px 4px 10px #fff;
+    overflow: hidden;
+    border-radius: 15px; 
+    background: radial-gradient(circle, rgba(21,107,157,1) 42%, rgba(16,42,63,1) 100%, rgba(0,212,255,1) 100%);
+    width: 400px;
+    transition: all 400ms ease;
+}
+
+.img1 img{
+    height: 300px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    width: 100%;
+}
+.img2 img{
+ position: relative;
+ display: block;
+ margin-left: auto;
+ margin-right: auto;
+ z-index: 1;
+ width: 140px;
+ height: 140px;
+ border-radius: 50%;
+ border: 7px solid #fff;
+ margin-top: -80px;
+}
+
+.card:hover .img2 img{
+    border-color: rgb(34,193,194);
+}
+.card:hover{
+    box-shadow: 1px 1px 20px #fff;
+    transform: translateY(-2%);
+}
+.main-text{
+    padding: 30px;
+    text-align: center;
+}
+.main-text h2{
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 20px;
+    margin: 0 0 20px;
+}
+.main-text p{
+    font-size: 16px;
+    padding: 0 35px;
+}
+.boton-editdel{
+    text-align: center;
+    padding-bottom: 20px;
+    
+}
+.boton-editdel i{
+    font-size: 20px;
+    color: white;
+    padding: 0 10px;
+}
+
+@media (max-width: 1200px){
+    .img1 img{
+        height: 270px;
+    }
+    
+}
+@media (max-width: 992px){
+    .img1 img{
+        height: 250px;
+    }
+    
+}
+
+
+/*-----------------------------*/
+
+.loader{
+    height:400px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .cuerpo-circulo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .circulo{
+    position: absolute;
+    border-radius: 50%;
+  }
+  .primer-circulo{
+    width: 250px;
+    height: 250px;
+    border-left: 5px solid #ff006e;
+    animation: rightrotate 1s linear infinite;
+  }
+  .segundo-circulo{
+    width: 200px;
+    height: 200px;
+    border-right: 4px solid #3a86ff;
+    animation: leftrotate 1s linear infinite;
+  }
+  .tercer-circulo{
+    width: 150px;
+    height: 150px;
+    border-top: 3px solid #ffbe0b;
+    animation: rightrotate 1s linear infinite;
+  }
+  @keyframes rightrotate
+  {
+    0%{
+      transform: rotate(0deg);
+    }
+    100%{
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes leftrotate
+  {
+    0%{
+      transform: rotate(360deg);
+    }
+    100%{
+      transform: rotate(0deg);
+    }
+  }

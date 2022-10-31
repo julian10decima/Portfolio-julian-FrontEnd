@@ -1,0 +1,45 @@
+<div class="container" id="Educacion">
+    <div class="col-lg-2 section-title" *ngIf="loading">
+        <h2>Educacion</h2>
+    </div>  
+    <div class="loader" *ngIf="loading">
+          
+        <div class="cuerpo-circulo">
+            <div class="primer-circulo circulo"></div>
+            <div class="segundo-circulo circulo"></div>
+            <div class="tercer-circulo circulo"></div>
+        </div>
+    </div>
+    <div class="row" *ngIf="!loading">
+        
+        <div class="col-lg-2 section-title">
+            <h2>Educacion</h2>
+            <button type="button" class="btn btn-dark" routerLink="/nuevaedu" *ngIf="isLogged">
+                <i class="bi bi-plus-circle"></i>
+            </button>
+        </div>
+
+        <div class="col-xl-4 col-lg-6  section-card" *ngFor="let Educacion of edu">
+            <div class="card" >
+                <div class="img1">
+                    <img src="{{Educacion.imgEdu}}" alt="img1">
+                </div>
+                <div class="img2">
+                    <img src="{{Educacion.imgEdu}}" alt="img2">
+                </div>
+                <div class="main-text">
+                    <h2>{{Educacion.nombreEdu}}</h2>
+                    <p>{{Educacion.periodo}}</p>
+                    <p>{{Educacion.nombreInstituto}}</p>
+                </div>
+                <div class="boton-editdel" *ngIf="isLogged">
+                    <button class="btn btn-info" routerLink="/editedu/{{Educacion.id}}">
+                        <i class="bi bi-pencil"></i></button>
+                    <button class="btn btn-danger" (click)="delete(Educacion.id)">
+                        <i class="bi bi-trash"></i></button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

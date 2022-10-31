@@ -1,0 +1,52 @@
+<div class="container" id="Proyect">
+    <div class="col-lg-2 section-title" *ngIf="loading">
+        <h2>Proyectos</h2>
+    </div>  
+    <div class="loader" *ngIf="loading">
+          
+        <div class="cuerpo-circulo">
+            <div class="primer-circulo circulo"></div>
+            <div class="segundo-circulo circulo"></div>
+            <div class="tercer-circulo circulo"></div>
+        </div>
+    </div>
+    <div class="row" *ngIf="!loading">
+        <div class="col-lg-2 section-title">
+            <h2>Proyectos Realizados</h2>
+            <button type="button" class="btn btn-dark" routerLink="/nuevoproyec" *ngIf="isLogged">
+                <i class="bi bi-plus-circle"></i>
+            </button>
+        </div>
+
+        <div class="contenedor">
+
+            <figure *ngFor="let proyecto of proyecto">
+                <img src="{{proyecto.urlimgP}}" alt="img-proyec">
+                <div class="capa">
+                    <h3>{{proyecto.nombreP}}</h3>
+                    <h4>{{proyecto.fecha}}</h4>
+                    <a href="{{proyecto.urlP}}" target="_blank">Link al Proyecto</a>
+                    <p>{{proyecto.descripcionP}}</p>
+                    
+                    
+                    <div class="login">
+                        <td *ngIf="isLogged">
+                            <button class="btn btn-info" routerLink="/editproyec/{{proyecto.id}}">
+                                <i class="bi bi-pencil"></i></button>
+                        </td>
+                        <td *ngIf="isLogged">
+                            <button class="btn btn-danger" (click)="delete(proyecto.id)">
+                                <i class="bi bi-trash"></i></button>
+                        </td>
+                    </div>
+
+                </div>
+
+            </figure>
+
+
+
+
+        </div>
+    </div>
+</div>

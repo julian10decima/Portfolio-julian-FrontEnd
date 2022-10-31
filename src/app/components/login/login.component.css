@@ -1,0 +1,91 @@
+.gradient-custom {
+    /* fallback for old browsers */
+    background: #6a11cb;
+    
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+    
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
+    }
+/* :root{
+    --green: hsl(162, 45%, 56%);
+    --plomo: hsl(162, 2%, 56%);
+    --blue: hsl(220, 85%, 57%);
+    --violet: hsl(272, 92%, 32%);
+    --tex-white: hsl(0, 0%, 100%);
+    --text-light-gray: hsl(0, 0%, 90%);
+    --body-bg-color: hsl(200, 54%, 12%);
+    --glass-bg-color: hsl(0, 0%, 100%, 0.05);
+    --border-color: hsl(0, 0%, 100%, 0.25);
+    --blur: blur(10px);
+    --button-hover-color:hsl(0, 0%, 0%, 0.3);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-fluid{
+    background-color: hsl(200, 54%, 12%);
+    color: hsl(0, 0%, 90%);
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.5;
+    overflow-x: hidden;
+    
+}
+.container-fluid::after .container-fluid::before{
+    content: '';
+    position: fixed;
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    z-index: -1;
+    filter: blur(150px);
+    opacity: 0.5;
+}
+.container-fluid::before{
+    background-color: hsl(220, 85%, 57%);
+    left: 0;
+    bottom: 0;
+    transform: translate(-50%);
+}
+.container-fluid::after{
+    background-color: hsl(272, 92%, 32%);
+    right: 0;
+    top: 0;
+    transform: translate(50%);
+}
+#form-main{
+    min-height: 100vh;
+    padding: 60px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#form-content{
+    width: 100%;
+    max-width: 450px;
+    position: relative;
+    z-index: 1;
+}
+#form-content #box{
+    border-color:  hsl(0, 0%, 100%, 0.05);
+    border: 1px solid hsl(0, 0%, 100%, 0.25);
+    padding: 40px 50px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+#form-content h3{
+    font-size: 28px;
+    text-align: center;
+    line-height: 1.2;
+    color: hsl(0, 0%, 100%);
+    font-weight: 500;
+}
+
+ */
+
+

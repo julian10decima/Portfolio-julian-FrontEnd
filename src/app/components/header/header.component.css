@@ -1,0 +1,13 @@
+div{
+    /* background-color: black; */
+}
+
+app-social{
+    float: right;
+    margin-top: 25px;
+}
+@media (min-width: 500px) and (max-width:2000px) {
+    .container{
+        max-width: 100%;
+    }
+   }

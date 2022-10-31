@@ -1,0 +1,57 @@
+<div class="container" id="Hys">
+    <div class="col-lg-2 section-title" *ngIf="loading">
+        <h2>Hard & Soft skills</h2>
+    </div>  
+    <div class="loader" *ngIf="loading">
+          
+        <div class="cuerpo-circulo">
+            <div class="primer-circulo circulo"></div>
+            <div class="segundo-circulo circulo"></div>
+            <div class="tercer-circulo circulo"></div>
+        </div>
+    </div>
+    <div class="row" *ngIf="!loading">
+        
+        <div class="col-lg-2 section-title">
+            <h2>Hard & Soft skills</h2>
+            <button type="button" routerLink="/newskill" class="btn btn-dark" *ngIf="isLogged"><i class="bi bi-plus-circle"></i></button>
+        </div>
+
+        <div class="text-center col-md-6 col-lg-4 circulo1" *ngFor="let skill of skill">
+            <h4>{{skill.nombre}}</h4>
+            <circle-progress
+                [percent]="(skill.porcentaje)"
+                [radius]="120"
+                [imageSrc]="(skill.urlimagen)"
+                [showImage]="true"
+                [imageHeight]="70"
+                [imageWidth]="70"
+                [showUnits]="false"
+                [showSubtitle]="false"
+                [backgroundGradient]="true"
+                [backgroundColor]="'#156b9d'"
+                [backgroundGradientStopColor]="'#102a3f'"
+                [outerStrokeWidth]="13"
+                [innerStrokeWidth]="5"
+                [innerStrokeColor]="'#fff'"
+                [outerStrokeGradient]="true"
+                [outerStrokeColor]="'#4882c2'"
+                [outerStrokeGradientStopColor]="'#fc52ff'"
+                [animation]="true"
+                [animationDuration]="500"
+             ></circle-progress>
+            <div class="login">
+                <td *ngIf="isLogged">
+                    <button class="btn btn-info" routerLink="/editskill/{{skill.id}}">
+                        <i class="bi bi-pencil"></i></button>
+                </td>
+                <td *ngIf="isLogged">
+                    <button class="btn btn-danger" (click)="delete(skill.id)">
+                        <i class="bi bi-trash"></i></button>
+                </td>
+            </div>
+                
+        </div>
+        
+    </div>
+</div>

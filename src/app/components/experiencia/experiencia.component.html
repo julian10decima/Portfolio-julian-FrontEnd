@@ -1,0 +1,49 @@
+<div class="container" id="ExpeLab">
+    <div class="col-lg-2 section-title" *ngIf="loading">
+        <h2>Experiencia Laboral</h2>
+    </div> 
+    <div class="loader" *ngIf="loading">
+        <div class="cuerpo-circulo">
+            <div class="primer-circulo circulo"></div>
+            <div class="segundo-circulo circulo"></div>
+            <div class="tercer-circulo circulo"></div>
+        </div>
+    </div>
+    <div class="row" *ngIf="!loading">
+
+        <div class="col-lg-2 section-title">
+            <h2>Experiencia Laboral</h2>
+            <button type="button" class="btn btn-dark" routerLink="/nuevaexp" *ngIf="isLogged">
+                <i class="bi bi-plus-circle"></i>
+            </button>
+        </div>
+        
+        
+            <div class="blog-slider" *ngFor="let Experiencia of expe">
+
+                <div class="blog-slider__item">
+                    <div class="blog-slider__img">
+
+                        <img src="{{Experiencia.imgExp}}" alt="imgexp">
+                    </div>
+                    <div class="blog-slider__content">
+                        <span class="blog-slider__code">{{Experiencia.periodoExp}}</span>
+                        <div class="blog-slider__title">{{Experiencia.nombreE}}</div>
+                        <div class="blog-slider__text">{{Experiencia.descripcionE}}</div>
+                        <td *ngIf="isLogged">
+                            <button class="btn btn-info" routerLink="/editexp/{{Experiencia.id}}">
+                                <i class="bi bi-pencil"></i></button>
+                        </td>
+                        <td *ngIf="isLogged">
+                            <button class="btn btn-danger" (click)="delete(Experiencia.id)">
+                                <i class="bi bi-trash"></i></button>
+                        </td>
+
+                    </div>
+                </div>
+
+
+            </div>
+        
+    </div>
+</div>

@@ -1,0 +1,36 @@
+<div class="container" id="Sobremi">
+    <div class="col-lg-2 section-title" *ngIf="loading">
+        <h2>Acerca de mí</h2>
+    </div>  
+    <div class="loader" *ngIf="loading">
+          
+        <div class="cuerpo-circulo">
+            <div class="primer-circulo circulo"></div>
+            <div class="segundo-circulo circulo"></div>
+            <div class="tercer-circulo circulo"></div>
+        </div>
+    </div>
+    <div class="row" *ngIf="!loading">
+
+        <div class="col-lg-2 section-title">
+            <h2>Acerca de mí</h2>
+            <button type="button" class="btn btn-dark" routerLink="/editacercade/1" *ngIf="isLogged">
+                <i class="bi bi-pencil"></i>
+            </button>
+        </div>
+        
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
+                <h3 class="nombre">{{persona.nombre}} {{persona.apellido}}</h3>
+                <p>Full Stack Developer Jr</p>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
+                <img src={{persona.img}} id="fotodeperfil" alt="imgperfil">
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4" >
+                <span>
+                    <p>{{persona.descripcion}}</p>
+                </span>
+            </div>
+        
+    </div>
+</div>
